@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <title>TP4 DPBO</title>
+
+  <!-- untuk style -->
+  <style>
+    .header
+    {
+      padding: auto;
+      margin-top: : auto;
+      font-family: Time News Roman;
+    }
+    
+   .kontainer
+    {
+      border-radius: 5px;
+      background-color: white;
+      border: 5px solid black;
+      padding: 40px;
+      width: 40%;
+      margin: 5px auto;
+      margin-top: -15px;
+        
+    }
+
+  </style>
+</head>
+
+<body style="background-color: skyblue">
+  <!-- untuk bagian head -->
+  <div class="header" >
+    <!-- untuk bagian judul  -->
+      <h2 style="background-color: black; color: white; text-align: center;"> Form Tagihan UKT</h2>
+
+    
+  </div>
+  <!-- untuk bangian body -->
+  <div style="margin: 2%">
+
+    <br>
+
+    <!-- bagian form -->
+    <form class="kontainer" action="index.php" method="POST">
+      <!-- untuk bangian NIM -->
+      <div class="form-col">
+        <div class="form-group">
+          <label for="nim">NIM</label>
+          <input type="text" class="form-control" name="nim" placeholder= "Masukkan NIM Anda" required />
+        </div>
+      </div>
+
+      <!-- untuk bagian nama mahasiswa -->
+      <div class="form-col">
+        <div class="form-group">
+          <label for="nama_mahasiswa">Nama Mahasiswa</label>
+          <input type="text" class="form-control" name="nama_mahasiswa" placeholder= "Masukkan Nama Anda"required />
+        </div>
+      </div>
+
+      <!-- untuk bagian gender -->
+      <div class="col">
+        <div class="form-group ">
+          <label for="gender">Jenis Kelamin</label>
+          <div class="col-sm-10">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="gender1" value="Perempuan" />
+              <label class="form-check-label" for="tsubject1">Perempuan</label>
+            </div>
+            <div></div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="gender2" value="Laki-Laki" />
+              <label class="form-check-label" for="tsubject2">Laki-Laki</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- untuk bagian Prodi -->
+      <div class="form-col">
+        <div class="form-group">
+          <label for="prodi">Prodi</label>
+          <input type="text" class="form-control" name="prodi" placeholder= "Masukkan Prodi Anda"required />
+        </div>
+      </div>
+
+      <!-- untuk bagian ukt -->
+      <div class="form-col">
+        <div class="form-group">
+          <label for="ukt">Jumlah UKT</label>
+          <input class="form-control" name="ukt" placeholder= "Masukkan Jumlah UKT Yang Harus Dibayar"required></input>
+        </div>
+      </div>
+
+      <!-- button add -->
+      <center>
+          <button type="submit" name="add" class="btn btn-primary" style="color: white; background-color: black">Add</button>
+          <button type="reset" name="cancel" class="btn btn-primary" style="color: white; background-color: black">reset</button>
+
+      </center>
+    </form>
+    <!-- Tabel Data Dosen -->
+    <div style="display: inline-block; ">
+      <h4 id="l" style="text-align: left; "><b>List Tagihan UKT</b></h4>
+      <!-- TABEL1 -->
+      <table align="center" border="10" style="text-align: center;background-color: white">
+        <tr>
+          <td style="width: 2%;"><b>No</b></td>
+          <td style="width: 5%;"><b>NIM</b></td>
+          <td style="width: 11%;"><b>Nama Mahasiswa</b></td>
+          <td style="width: 5%;"><b>Jenis Kelamin</b></td>
+          <td style="width: 7%;"><b>Prodi</b></td>
+          <td style="width: 11%;"><b>UKT</b></td>
+          <td style="width: 4%;"><b>Status Pembayaran</b></td>
+          <td style="width: 10%;"></td>
+        </tr>
+        <tr>
+          <!-- DATA YG AKAN DIGANTI -->
+          DATA_TABEL
+        </tr>
+
+      </table>
+    </div>
+  </div>
+
+  <!-- bagian bawah -->
+  <div class="footer" >
+        <h3 style="background-color: black; color: white;text-align: center;">&copy 2021 | Ade Ariyansyah | 1904442 </h3>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
