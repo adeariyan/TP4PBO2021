@@ -16,7 +16,7 @@ if(isset($_POST['nim']))
 }
 else if(isset($_POST['nama_mahasiswa']))
 {
-	$otask->getTasknama_mahasiswa();// untuk get nama dosen
+	$otask->getTasknama_mahasiswa();// untuk get nama mahasiswa
 }
 else if(isset($_POST['gender']))
 {
@@ -47,7 +47,7 @@ if(isset($_POST['add']))// untuk nambahin data
 }
 
 while (list($id, $nim, $nama_mahasiswa, $gender, $prodi, $ukt, $status) = $otask->getResult()) {
-	// Tampilan jika status data nya sudah diacc
+	// Tampilan jika status pembayaran yang sudah di bayar
 	if($status == "Sudah Lunas")
 	{
 		$data .= "<tr>
